@@ -1,0 +1,138 @@
+@theme "/dev/null"
+@import "shared/colors.rasi"
+
+
+* {
+    font:                 "JetBrains Mono Medium 12";
+}
+
+configuration {
+    modi:                 "drun,run,filebrowser,window";
+    display-drun:         "";
+    display-run:          "";
+    display-filebrowser:  "";
+    display-window:       "";
+    window-format:        "{n}";
+    show-icons:           true;
+    icon-theme:           "Papirus";
+    kb-cancel:            "Escape,Alt+F1";
+}
+
+window {
+    width:                702px;
+    height:               577px;
+    background-color:     @bg-0;
+    border-radius:        10px;
+}
+
+mainbox {
+    spacing:              12px;
+    padding:              40px;
+    background-color:     transparent;
+    children:             [inputbar, listview, message];
+}
+
+inputbar {
+    border-radius:        8px;
+    spacing:              12px;
+    background-color:     @bg-0;
+    text-color:           @fg-1;
+    children:             [textbox-prompt-colon, entry, mode-switcher];
+}
+
+textbox-prompt-colon {
+    border-radius:        8px;
+    padding:              14px 0px 14px 16px;
+    expand:               false;
+    vertical-align:       0.5;
+    background-color:     transparent;
+    text-color:           @fg-0;
+    font:                 "Symbols Nerd Font 16px";
+    str:                  "";
+}
+
+entry {
+    padding:              12px 0px;
+    vertical-align:       0.5;
+    background-color:     transparent;
+    text-color:           inherit;
+    border-radius:        8px;
+    cursor:               text;
+    placeholder:          "Search...";
+}
+
+listview {
+    spacing:              10px;
+    padding:              12px;
+    columns:              1;
+    layout:               vertical;
+    background-color:     @bg-0;
+    border-radius:        12px;
+}
+
+element {
+    border-radius:        8px;
+    padding:              14px 15px;
+    spacing:              10px;
+    cursor:               pointer;
+    background-color:     transparent;
+}
+
+element-icon {
+    size:                 32px;
+    cursor:               inherit;
+    background-color:     transparent;
+}
+
+element-text {
+    vertical-align:       0.5;
+    horizontal-align:     0.0;
+    text-color:           @fg-1;
+    cursor:               inherit;
+    background-color:     transparent;
+}
+
+element selected {
+    background-color:     @select;
+}
+
+element-text selected {
+    text-color:           @bg-0;
+}
+
+mode-switcher {
+    background-color:     transparent;
+    spacing:              12px;
+}
+
+button {
+    font:                 "Symbols Nerd Font 16px";
+    background-color:     @bg-2;
+    text-color:           @fg-1;
+    border-radius:        8px;
+    padding:              14px 16px;
+    cursor:               pointer;
+}
+
+button selected {
+    background-color:     @select;
+    text-color:           @bg-1;
+}
+
+message {
+    padding:              18px;
+    border-radius:        8px;
+    background-color:     @bg-0;
+}
+
+error-message {
+    padding:              12px;
+    background-color:     @bg-0;
+}
+
+textbox {
+    background-color:     transparent;
+    text-color:           @fg-1;
+    horizontal-align:     0.5;
+    vertical-align:       0.5;
+}

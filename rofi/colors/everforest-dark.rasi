@@ -1,0 +1,18 @@
+* {
+    bg-0:   #232A2E;
+    bg-1:   #2D353B;
+    bg-2:   @bg-1;
+
+    fg-0:   #D3C6AA;
+    fg-1:   #D3C6AA;
+    fg-2:   #D3C6AA;
+
+    red:    #E67E80;
+    yellow: #DBBC7F;
+    green:  #A7C080;
+    aqua:   #83C092;
+    blue:   #7FBBB3;
+    purple: #D699B6;
+
+    select: @green;
+}
